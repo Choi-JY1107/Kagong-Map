@@ -1,0 +1,2 @@
+export const DEFAULT_CENTER_LOCATION = [126.9779692, 37.566535] // [위도, 경도]
+export const DEFAULT_ZOOM_LEVEL = 17
