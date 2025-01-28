@@ -55,3 +55,37 @@ Frontend
 Backend
 
 - [ ] 시간 설정이 들어오면 그 조건에 맞는 카페 정보 전송
+
+## 디렉토리 구조
+
+```
+src/
+├── app/
+│   ├── App.tsx
+│   ├── providers/
+│   ├── store/
+│   ├── styles/
+│   └── config/
+├── pages/
+│   ├── HomePage/
+│   │   ├── index.tsx
+│   │   ├── ui/
+│   │   └── model/
+│   └── DetailPage/
+├── widgets/
+│   ├── NavigationBar/
+│   │   ├── index.tsx
+│   │   ├── style.css
+│   │   └── model.ts
+├── features/
+│   ├── auth/
+│   └── search/
+├── entities/
+│   ├── User/
+│   ├── Product/
+├── shared/
+│   ├── ui/
+│   ├── lib/
+│   ├── api/
+│   └── styles/
+```
