@@ -1,4 +1,5 @@
 import { Map } from 'ol'
+import { NO_EXTENT_ERROR_MESSAGE, NO_MAP_ERROR_MESSAGE } from '../shared/constants/errorConstants';
 
 export const getBoundingBox = (map: Map): { minLon: number; minLat: number; maxLon: number; maxLat: number } | null => {
   checkValidMap(map)
@@ -13,9 +14,9 @@ export const getBoundingBox = (map: Map): { minLon: number; minLat: number; maxL
 }
 
 const checkValidMap = (map: Map | null): void => {
-    if(!map) throw new Error('Map 객체가 존재하지 않습니다.')
+    if(!map) throw new Error(NO_MAP_ERROR_MESSAGE)
 }
 
 const checkValidExtent = (extent: number[]): void => {
-    if (!extent) throw new Error('Extent가 존재하지 않습니다.')
+    if (!extent) throw new Error(NO_EXTENT_ERROR_MESSAGE)
 }

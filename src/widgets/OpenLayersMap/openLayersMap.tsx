@@ -7,13 +7,14 @@ import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
 import { useGeographic } from 'ol/proj'
 import { DEFAULT_CENTER_LOCATION, DEFAULT_ZOOM_LEVEL } from '../../shared/constants/mapConstants'
+import { NO_MAP_ELEMENT_ERROR_MESSAGE } from '../../shared/constants/errorConstants'
 
 type OpenLayersMapProps = {
   mapRef: React.MutableRefObject<Map | null>
 }
 
 const checkValidMapElement = (mapElement: React.RefObject<HTMLDivElement>): void => {
-  if (!mapElement.current) throw new Error('지도 요소가 존재하지 않습니다.')
+  if (!mapElement.current) throw new Error(NO_MAP_ELEMENT_ERROR_MESSAGE)
 }
 
 const OpenLayersMap: React.FC<OpenLayersMapProps> = ({ mapRef }) => {
