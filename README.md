@@ -1,6 +1,6 @@
 # 첫 사이드 프로젝트(이름은 미정)
 ## ☀️ 관련 일지
-![개발 일지](https://godsaeng-salgi.tistory.com/52)
+[개발 일지](https://godsaeng-salgi.tistory.com/52)
 
 ## ⚒️ 기술 스택
 
@@ -35,7 +35,7 @@ Map : Openlayers, Naver API
 
 Frontend
 
-- [ ] 사이트 접속 시, 지도 띄우기 
+- [x] 사이트 접속 시, 지도 띄우기 
 - [ ] 탐색 버튼 클릭 시, 중앙 위치와 최대 사거리 위치 정보 전송
 - [ ] 탐색 버튼 클릭 후, 카페 리스트업
 - [ ] 탐색 버튼 클릭 후, 지도에 마커 생성
@@ -73,19 +73,19 @@ src/
 │   │   └── model/
 │   └── DetailPage/
 ├── widgets/
-│   ├── NavigationBar/
-│   │   ├── index.tsx
-│   │   ├── style.css
-│   │   └── model.ts
+│   └── NavigationBar/
+│       ├── index.tsx
+│       ├── style.css
+│       └── model.ts
 ├── features/
 │   ├── auth/
 │   └── search/
 ├── entities/
 │   ├── User/
-│   ├── Product/
-├── shared/
-│   ├── ui/
-│   ├── lib/
-│   ├── api/
-│   └── styles/
+│   └── Product/
+└── shared/
+    ├── ui/
+    ├── lib/
+    ├── api/
+    └── styles/
 ```
