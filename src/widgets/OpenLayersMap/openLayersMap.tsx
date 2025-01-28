@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import 'ol/ol.css'
 import './openLayersMap.css'
 import Map from 'ol/Map'
@@ -7,17 +7,25 @@ import TileLayer from 'ol/layer/Tile'
 import OSM from 'ol/source/OSM'
 import { useGeographic } from 'ol/proj'
 import { DEFAULT_CENTER_LOCATION, DEFAULT_ZOOM_LEVEL } from '../../shared/constants/mapConstants'
+import { NO_MAP_ELEMENT_ERROR_MESSAGE } from '../../shared/constants/errorConstants'
 
-const OpenLayersMap = () => {
+type OpenLayersMapProps = {
+  mapRef: React.MutableRefObject<Map | null>
+}
+
+const checkValidMapElement = (mapElement: React.RefObject<HTMLDivElement>): void => {
+  if (!mapElement.current) throw new Error(NO_MAP_ELEMENT_ERROR_MESSAGE)
+}
+
+const OpenLayersMap: React.FC<OpenLayersMapProps> = ({ mapRef }) => {
   const mapElement = useRef<HTMLDivElement>(null)
 
   useGeographic()
-
   useEffect(() => {
-    if (!mapElement.current) return
+    checkValidMapElement(mapElement)
 
     const map = new Map({
-      target: mapElement.current,
+      target: mapElement.current!,
       layers: [
         new TileLayer({
           source: new OSM(),
@@ -29,16 +37,14 @@ const OpenLayersMap = () => {
       }),
     })
 
+    mapRef.current = map 
+    
     return () => {
       map.setTarget(undefined)
     }
-  }, [])
+  }, [mapRef])
 
-  return (
-    <div className="openlayers-container">
-      <div ref={mapElement} className="openlayers-map"></div>
-    </div>
-  )
+  return <div ref={mapElement} className="openlayers-map"></div>
 }
 
 export default OpenLayersMap
