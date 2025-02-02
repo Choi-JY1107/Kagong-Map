@@ -1,7 +1,7 @@
 import { Map } from 'ol'
 import { NO_EXTENT_ERROR_MESSAGE, NO_MAP_ERROR_MESSAGE } from '../shared/constants/errorConstants';
 
-export const getBoundingBox = (map: Map): { minLon: number; minLat: number; maxLon: number; maxLat: number } | null => {
+export const getBoundingBox = async (map: Map): Promise<{ minLon: number; minLat: number; maxLon: number; maxLat: number; } | null> => {
   checkValidMap(map)
 
   // 현재 화면의 경계 계산

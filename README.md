@@ -60,32 +60,27 @@ Backend
 
 ```
 src/
-├── app/
-│   ├── App.tsx
-│   ├── providers/
-│   ├── store/
-│   ├── styles/
-│   └── config/
-├── pages/
+├── app/ : 앱의 진입점
+├── pages/ : 페이지 단위의 구성
 │   ├── HomePage/
 │   │   ├── index.tsx
 │   │   ├── ui/
 │   │   └── model/
 │   └── DetailPage/
-├── widgets/
-│   └── NavigationBar/
-│       ├── index.tsx
+├── widgets/ : 여러 페이지에서 재사용할 수 있는 복합 UI 요소
+│   └── OpenLayersMap/
+│       ├── index.ts
 │       ├── style.css
 │       └── model.ts
-├── features/
-│   ├── auth/
-│   └── search/
-├── entities/
-│   ├── User/
-│   └── Product/
-└── shared/
+├── features/ : 기능 모음
+│   ├── api/
+│   └── location/
+├── entities/ : 도메인 엔티티 관리
+│   └── cafe/
+└── shared/ : 공통 리소스
     ├── ui/
     ├── lib/
     ├── api/
+    ├── constant/
     └── styles/
 ```
