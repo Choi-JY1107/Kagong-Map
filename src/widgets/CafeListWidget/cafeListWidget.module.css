@@ -24,6 +24,31 @@
   font-weight: bold;
   padding: 0px;
   border-bottom: 1px solid #ccc; /* ✅ 헤더 아래에 구분선 추가 */
+  -webkit-user-select: none !important; 
+  -moz-user-select: -moz-none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.header:hover {
+  cursor: pointer;
+}
+
+.header:active {
+  cursor: grabbing;
+}
+
+.draggableHeader {
+  cursor: grab; /* 기본 상태 */
+  user-select: none;
+}
+
+.draggableHeader:hover {
+  cursor: pointer; /* 마우스 올릴 때 */
+}
+
+.grabbing {
+  cursor: grabbing !important; /* ✅ 드래그 중일 때 */
 }
   
   .closeButton {
