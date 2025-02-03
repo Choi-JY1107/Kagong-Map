@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react'
-import OpenLayersMap from '../widgets/OpenLayersMap/openLayersMap'
-import { getBoundingBox } from '../features/getBoundingBox'
+import OpenLayersMap from '../../widgets/OpenLayersMap/openLayersMap'
+import { getBoundingBox } from '../../features/getBoundingBox'
 import Map from 'ol/Map'
 import styles from './HomePage.module.css'
-import { BoundingBox, fetchCafeList } from '../features/api/cafeAPI'
-import CafeListWidget from '../widgets/CafeListWidget/cafeListWidget'
-import { Cafe } from '../entities/cafe'
+import { BoundingBox, fetchCafeList } from '../../features/api/cafeAPI'
+import CafeListWidget from '../../widgets/CafeListWidget/cafeListWidget'
+import { Cafe } from '../../entities/cafe'
 
 const HomePage = () => {
   const mapRef = useRef<Map | null>(null)
