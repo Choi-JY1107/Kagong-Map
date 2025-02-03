@@ -1,4 +1,4 @@
-import styles from './cafeListWidget.module.css'
+import styles from './CafeListWidget.module.css'
 
 type CafeListHeaderProps = {
   onClose: () => void

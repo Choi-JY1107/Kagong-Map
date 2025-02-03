@@ -1,7 +1,7 @@
 import styles from './CafeListWidget.module.css'
 import { Cafe } from '../../entities/cafe'
-import CafeListHeader from './cafeListHeader'
-import CafeList from './cafeList'
+import CafeListHeader from './CafeListHeader'
+import CafeList from './CafeList'
 
 type CafeListWidgetProps = {
   cafes: Cafe[]

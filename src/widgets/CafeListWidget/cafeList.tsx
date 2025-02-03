@@ -1,6 +1,6 @@
 import styles from './cafeListWidget.module.css'
 import { Cafe } from '../../entities/cafe'
-import CafeListItem from './cafeListItem'
+import CafeListItem from './CafeListItem'
 
 type CafeListProps = {
   cafes: Cafe[]

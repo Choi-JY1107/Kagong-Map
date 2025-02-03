@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
-import OpenLayersMap from '../../widgets/OpenLayersMap/openLayersMap'
+import OpenLayersMap from '../../widgets/OpenLayersMap/OpenLayersMap'
 import { getBoundingBox } from '../../features/getBoundingBox'
 import Map from 'ol/Map'
 import styles from './HomePage.module.css'
 import { BoundingBox, fetchCafeList } from '../../features/api/cafeAPI'
-import CafeListWidget from '../../widgets/CafeListWidget/cafeListWidget'
+import CafeListWidget from '../../widgets/CafeListWidget/CafeListWidget'
 import { Cafe } from '../../entities/cafe'
 
 const HomePage = () => {

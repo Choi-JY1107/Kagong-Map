@@ -1,4 +1,4 @@
-import styles from './cafeListWidget.module.css'
+import styles from './CafeListWidget.module.css'
 import { Cafe } from '../../entities/cafe'
 
 type CafeListItemProps = {

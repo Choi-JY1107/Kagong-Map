@@ -16,13 +16,15 @@
     bottom: 0; /* 화면 위로 올라옴 */
   }
   
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-  }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0px;
+  border-bottom: 1px solid #ccc; /* ✅ 헤더 아래에 구분선 추가 */
+}
   
   .closeButton {
     background: none;
