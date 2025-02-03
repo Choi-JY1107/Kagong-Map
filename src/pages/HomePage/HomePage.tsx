@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <OpenLayersMap mapRef={mapRef} />
+      <OpenLayersMap mapRef={mapRef} cafes={cafeList}/>
       <button className={styles['extract-button']} onClick={handleGetBoundingBox}>
         현재 위치 추출하기
       </button>
